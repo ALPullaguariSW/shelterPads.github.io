@@ -4,7 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Centro de Refugio de Animales Rescatados</title>
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Estilos omitidos para mayor claridad, sigue usando los estilos del ejemplo anterior */
+
+      /* Estilos responsivos omitidos para mayor claridad */
+
+      .card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+      }
+
+      .card img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
 
   <body>
@@ -25,30 +41,12 @@
     <section id="animales">
       <article>
         <h2>Animales en Adopción</h2>
-        <!-- Galería de animales con imágenes, nombres y descripciones -->
+        <div id="animal-cards" class="flex-container"></div>
       </article>
     </section>
 
-    <section id="proceso">
-      <article>
-        <h2>Proceso de Adopción</h2>
-        <!-- Contenido informativo sobre el proceso de adopción -->
-      </article>
-    </section>
-
-    <section id="donaciones">
-      <article>
-        <h2>Donaciones</h2>
-        <!-- Información sobre cómo donar y botón de donación -->
-      </article>
-    </section>
-
-    <section id="contacto">
-      <article>
-        <h2>Contacto</h2>
-        <!-- Formulario de contacto -->
-      </article>
-    </section>
+    <!-- Incluye el archivo JS externo -->
+    <script src="app.js"></script>
 
     <footer>
       <p>
