@@ -74,6 +74,7 @@ section {
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-secondary);
 }
 
 .card img {
@@ -85,7 +86,7 @@ section {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #f4f4f4;
+    background-color: var(--color-primary);
     padding: 20px;
     border-radius: 10px;
 }
@@ -148,7 +149,7 @@ section {
 }
 /* Estilos de la sección de donaciones */
 #donaciones {
-    background-color: #ffcc00; /* Amarillo */
+    background-color: var(--color-tertiary); /* Amarillo */
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
@@ -213,7 +214,7 @@ section {
 }
 
 #donation-form button:hover {
-    background-color: #ffcc00; /* Amarillo al hacer hover */
+    background-color: var(--color-secondary); /* Amarillo al hacer hover */
 }
 
 /* Estilos responsivos */
