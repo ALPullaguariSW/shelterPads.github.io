@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Centro de Refugio de Animales Rescatados</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
@@ -28,7 +29,90 @@
       </article>
     </section>
 
+    <!-- Nueva sección: Proceso de Adopción -->
+    <section id="proceso">
+      <article>
+        <h2>Proceso de Adopción</h2>
+        <div id="adopcion-steps" class="flex-container">
+          <div class="step">
+            <h3>Paso 1: Registro</h3>
+            <p>Completa el formulario de registro de adopción en línea.</p>
+          </div>
+          <div class="step">
+            <h3>Paso 2: Entrevista</h3>
+            <p>
+              Participa en una entrevista para evaluar tu idoneidad como
+              adoptante.
+            </p>
+          </div>
+          <div class="step">
+            <h3>Paso 3: Visita</h3>
+            <p>
+              Programa una visita al centro para conocer al animal y asegurarte
+              de que es una buena coincidencia.
+            </p>
+          </div>
+          <div class="step">
+            <h3>Paso 4: Adopción</h3>
+            <p>
+              Completa los trámites de adopción y lleva a tu nuevo amigo a casa.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- Sección de donaciones -->
+    <section id="donaciones">
+      <article>
+        <h2 style="color: var(--color-tertiary)">Donaciones</h2>
+        <form id="donation-form">
+          <label for="amount">Cantidad a donar:</label>
+          <input
+            type="text"
+            id="amount"
+            name="amount"
+            placeholder="Ingrese la cantidad"
+            required
+          />
+
+          <label for="name">Nombre completo:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Nombre completo"
+            required
+          />
+
+          <label for="card-element">Tarjeta de Crédito:</label>
+          <div id="card-element"></div>
+
+          <!-- Se mostrarán errores aquí -->
+          <div id="card-errors" role="alert"></div>
+
+          <button type="submit">Donar</button>
+        </form>
+      </article>
+    </section>
+    <!-- Sección de contacto -->
+    <section id="contacto">
+      <h2 style="color: var(--color-secondary)">Contacto</h2>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </section>
+
     <!-- Incluye el archivo JS externo -->
+    <script src="https://js.stripe.com/v3/"></script>
     <script src="funtions.js"></script>
 
     <footer>

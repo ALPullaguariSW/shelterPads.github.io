@@ -1,35 +1,40 @@
-/* Reset de estilos y estilos básicos */
-body, h1, h2, ul, li, p {
-    margin: 0;
-    padding: 0;
+:root {
+    --color-primary: rgb(255, 191, 51);
+    --color-secondary: rgb(2, 113, 183);
+    --color-tertiary: rgb(203, 203, 203);
 }
 
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background-color: var(--color-tertiary);
+    color: #333;
 }
 
 /* Estilos del header */
 header {
-    background-color: #333;
+    background-color: var(--color-primary);
     color: #fff;
     text-align: center;
     padding: 20px;
 }
 
-/* Estilos de la barra de navegación */
+/* Estilos del nav */
 nav {
-    background-color: #444;
+    background-color: var(--color-secondary);
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
-    text-align: center;
+    display: flex;
 }
 
 nav ul li {
-    display: inline-block;
     margin-right: 20px;
 }
 
@@ -39,43 +44,194 @@ nav a {
     font-weight: bold;
 }
 
-/* Estilos de las secciones y artículos */
+nav img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Estilos de las secciones */
 section {
     padding: 20px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-article {
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #333;
-}
-
-/* Estilos del pie de página */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+/* Estilos de las cards */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .card {
-    border: 1px solid #ccc;
-    padding: 10px;
+    flex: 0 1 calc(30% - 20px); /* Ajusta el ancho de cada card según tus necesidades */
     margin: 10px;
+    padding: 10px;
     text-align: center;
-  }
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .card img {
+.card img {
     max-width: 100%;
     height: auto;
-  }
+    border-radius: 8px;
+}
+#adopcion-steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.step:hover {
+    transform: scale(1.05);
+}
+ /* Estilos de la sección de contacto */
+ #contacto {
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contacto label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contacto button {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contacto button:hover {
+    background-color: #ffcc00; /* Cambia el color al hacer hover */
+}
+/* Estilos de la sección de donaciones */
+#donaciones {
+    background-color: #ffcc00; /* Amarillo */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#donaciones article {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#donaciones h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#donation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#donation-form label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#donation-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#card-element {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#card-errors {
+    color: #ff0000; /* Rojo para resaltar errores */
+    margin-bottom: 20px;
+}
+
+#donation-form button {
+    background-color: #333; /* Negro */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#donation-form button:hover {
+    background-color: #ffcc00; /* Amarillo al hacer hover */
+}
+
 /* Estilos responsivos */
 @media screen and (max-width: 768px) {
-    /* Ajustes para dispositivos más pequeños */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #animal-cards {
+        flex-direction: column;
+        align-items: center;
+    }
     nav ul li {
-        display: block;
-        margin-bottom: 10px;
+        margin: 10px 0;
+    }
+    #adopcion-steps {
+        flex-direction: column;
+        align-items: center;
     }
 }
