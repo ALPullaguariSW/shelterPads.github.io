@@ -1,5 +1,3 @@
-// Contenido de app.js
-
 document.addEventListener('DOMContentLoaded', function () {
     const animalCardsContainer = document.getElementById('animal-cards');
 
@@ -62,31 +60,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Limpia el formulario después de enviar
         formularioContacto.reset();
+
+        // Después de procesar el formulario, lanza el efecto de confeti
+        launchConfetti();
     });
 });
+
+/**add a confetti when the user click ondonate */
 document.addEventListener('DOMContentLoaded', function () {
-    const stripe = Stripe('pk_test_51OVFwwFwYyQoxkEMnReOCp6l0tU5U3JEE6uoJjXaetpEqDHE3pmknwniw2akrvOgl5AtsLIK4f1ULXh4ZRrWXkMB00wbQNbrxG');
-    const elements = stripe.elements();
-    const cardElement = elements.create('card');
-    
-    cardElement.mount('#card-element');
-    
-    const form = document.getElementById('donation-form');
-    const cardErrors = document.getElementById('card-errors');
-    
-    form.addEventListener('submit', async function (event) {
+    // Capturamos el formulario de donaciones
+    const donationForm = document.querySelector('#donation-form');
+
+    donationForm.addEventListener('submit', function (event) {
         event.preventDefault();
-    
-        const { token, error } = await stripe.createToken(cardElement);
-    
-        if (error) {
-            cardErrors.textContent = error.message;
-        } else {
-            // Aquí puedes enviar el token de pago (token.id) al servidor para procesar la donación
-            alert(`Donación exitosa. Token: ${token.id}`);
-            
-            // También puedes realizar otras acciones como enviar el token al servidor mediante AJAX
-            // y mostrar un mensaje de éxito o redirigir a una página de confirmación.
-        }
+
+        // Procesa el formulario, por ejemplo, enviándolo al servidor
+
+        // Después de procesar el formulario, lanza el efecto de confeti
+        launchConfetti();
     });
+
+    function launchConfetti() {
+        // Configuración de la lluvia de confeti
+        const confettiConfig = {
+            spread: 180,
+            startVelocity: 40,
+            elementCount: 150,
+            dragFriction: 0.12,
+            duration: 3000,
+            stagger: 3,
+            width: "10px",
+            height: "10px",
+            colors: ["#ffcc00", "#ff6600", "#ff3333", "#990000", "#9933cc"]
+        };
+
+        // Lanza la lluvia de confeti
+        canvasConfetti(confettiConfig);
+    }
 });
