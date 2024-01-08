@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: var(--color-tertiary);
+    background-color: white;
     color: #333;
 }
 
@@ -56,7 +56,7 @@ section {
     background-color: #fff;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 /* Estilos de las cards */
@@ -70,6 +70,7 @@ section {
     flex: 0 1 calc(30% - 20px); /* Ajusta el ancho de cada card según tus necesidades */
     margin: 10px;
     padding: 10px;
+
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -149,7 +150,7 @@ section {
 }
 /* Estilos de la sección de donaciones */
 #donaciones {
-    background-color: var(--color-tertiary); /* Amarillo */
+    background-color: var(--color-secondary); /* Amarillo */
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
@@ -177,7 +178,7 @@ section {
 #donation-form label {
     font-size: 1.2em;
     margin-bottom: 10px;
-    color: #333;
+    color: white;
 }
 
 #donation-form input {
@@ -203,7 +204,7 @@ section {
 }
 
 #donation-form button {
-    background-color: #333; /* Negro */
+    background-color: var(--color-primary);
     color: #fff;
     padding: 15px 30px;
     border: none;
@@ -235,4 +236,16 @@ section {
         flex-direction: column;
         align-items: center;
     }
+}
+/*Footer*/
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #ffcc00;
+
+
+
+
+
+
 }
